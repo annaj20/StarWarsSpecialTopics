@@ -311,11 +311,11 @@ function drawLocation(place) {
    image(stars, 0, 0,stars.width/2, stars.height/2);
    
    // draw nodes
-   for (w = 0; w < places.length; w++) {
-    let place = places[w]
+  // for (w = 0; w < places.length; w++) {
+    //let place = places[w]
     
-     drawLocation(place);
-   }
+     //drawLocation(place);
+  // }
     
    // Update each ship
    for (i = 0; i < ships.length; i++){
@@ -342,7 +342,7 @@ function drawLocation(place) {
  // By default, this is set per 60 frames (so time = 1 is one second)
  function timeflow(time, speedoftime){
    if (frameCount % (speedoftime * 60) == 0){
-     colorLocations();
+     //colorLocations();
      return time += 1;
    } else {
      return time
