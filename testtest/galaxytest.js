@@ -310,12 +310,12 @@ function drawLocation(place) {
    imageMode(CORNER);
    image(stars, 0, 0,stars.width/2, stars.height/2);
    
-   // draw nodes
-  // for (w = 0; w < places.length; w++) {
-    //let place = places[w]
+  // draw nodes
+  for (w = 0; w < places.length; w++) {
+    let place = places[w]
     
-     //drawLocation(place);
-  // }
+     drawLocation(place);
+   
     
    // Update each ship
    for (i = 0; i < ships.length; i++){
@@ -334,7 +334,7 @@ function drawLocation(place) {
    // Check if time should move forward
    time = timeflow(time, speedoftime);
   }
- 
+ }
 }
  
  
