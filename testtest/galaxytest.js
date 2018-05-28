@@ -313,6 +313,7 @@ function drawLocation(place) {
    // draw nodes
    for (w = 0; w < places.length; w++) {
     let place = places[w]
+    }
     
      drawLocation(place);
    // Update each ship
