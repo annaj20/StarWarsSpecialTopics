@@ -323,11 +323,11 @@ function drawLocation(place) {
 }
 
 function draw() {
-    // Draw background
-    // imageMode(CORNER);
-    // image(stars, 0, 0,stars.width/2, stars.height/2);
+    Draw background
+    imageMode(CORNER);
+    image(stars, 0, 0,stars.width/2, stars.height/2);
 
-    // update colours of nodes
+    // update colors of nodes
     colorLocations();
 
     // Update each ship
