@@ -323,7 +323,7 @@ function drawLocation(place) {
 }
 
 function draw() {
-    Draw background
+    // Draw background
     imageMode(CORNER);
     image(stars, 0, 0,stars.width/2, stars.height/2);
 
