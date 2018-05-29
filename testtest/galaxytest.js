@@ -229,6 +229,34 @@ let mentioned_locations = [['Naboo', 'Naboo'],
     [],
     []];
 
+
+function colorLocations() {
+    for (var location in mentioned_locations) {
+        let place = searchByName(location);
+        if (place !== -1) {
+            place.color = (int)(0.9 * place.color);
+            drawLocation(location);
+        }
+    }
+}
+
+function searchByName(name) {
+    for (var place in places) {
+        if (place.name === name) {
+            return place;
+        }
+    }
+    return -1;
+}
+
+
+function drawLocation(place) {
+    ellipse(place.coordinates[0], place.coordinates[1], 10, 10);
+    fill(place.color, place.color, place.color);
+}
+
+
+
 function preload() {
     shp = loadImage("ship.png");
     stars = loadImage("galaxymap-1.jpg")
@@ -294,33 +322,7 @@ function setup() {
     }
 }
 
-//code from Mitchell
 
-
-function colorLocations() {
-    for (var location in mentioned_locations) {
-        let place = searchByName(location);
-        if (place !== -1) {
-            place.color = (int)(0.9 * place.color);
-            drawLocation(location);
-        }
-    }
-}
-
-function searchByName(name) {
-    for (var place in places) {
-        if (place.name === name) {
-            return place;
-        }
-    }
-    return -1;
-}
-
-
-function drawLocation(place) {
-    ellipse(place.coordinates[0], place.coordinates[1], 10, 10);
-    fill(place.color, place.color, place.color);
-}
 
 function draw() {
     // Draw background
