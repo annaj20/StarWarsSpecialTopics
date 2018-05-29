@@ -261,13 +261,7 @@ function preload() {
     shp = loadImage("ship.png");
     stars = loadImage("galaxymap-1.jpg")
     
-    // draw nodes
-    for (w = 0; w < places.length; w++) {
-        let place = places[w];
-        drawLocation(place);
-    }
-
-    // Load data from a TSV file
+   // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
 
 
@@ -320,6 +314,11 @@ function setup() {
     goal = 0;
     frameadjust = -20;
 
+     // draw nodes
+    for (w = 0; w < places.length; w++) {
+        let place = places[w];
+        drawLocation(place);
+    }
 
     
 }
