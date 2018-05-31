@@ -231,37 +231,39 @@ let mentioned_locations = [['Naboo', 'Naboo'],
 
 
 function colorLocations() {
-    for (var location in mentioned_locations) {
-        let place = searchByName(location);
-        if (place !== -1) {
-            place.color = (int)(0.9 * place.color);
-            drawLocation(location);
+    for (let place of places) {
+        for (let item of mentioned_locations) {
+            if (item.length > 0) {
+                for (let location of item) {
+                    if (location === place.name) {
+                        place.color = Math.round(0.99 * place.color);
+                    }
+                }
+            }
         }
+        drawLocation(place);
     }
 }
-
-function searchByName(name) {
-    for (var place in places) {
-        if (place.name === name) {
-            return place;
-        }
-    }
-    return -1;
-}
-
 
 function drawLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], 10, 10);
     fill(place.color, place.color, place.color);
 }
 
+function drawLocations() {
+    // draw nodes
+    for (let w = 0; w < places.length; w++) {
+        let place = places[w];
+        drawLocation(place);
+    }
+}
 
 
 function preload() {
     shp = loadImage("ship.png");
     stars = loadImage("galaxymap-1.jpg")
-    
-   // Load data from a TSV file
+
+    // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
 
 
@@ -314,24 +316,15 @@ function setup() {
     goal = 0;
     frameadjust = -20;
 
-     // draw nodes
-    for (w = 0; w < places.length; w++) {
-        let place = places[w];
-        drawLocation(place);
-    }
-
-    
+    // draw nodes
+    drawLocations();
 }
-
 
 
 function draw() {
     // Draw background
     imageMode(CORNER);
-    image(stars, 0, 0,stars.width/2, stars.height/2);
-
-    // update colors of nodes
-    colorLocations();
+    image(stars, 0, 0, stars.width / 2, stars.height / 2);
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
@@ -349,8 +342,6 @@ function draw() {
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
-
-
 }
 
 
@@ -358,8 +349,11 @@ function draw() {
 // By default, this is set per 60 frames (so time = 1 is one second)
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
+        // draw nodes
+        colorLocations();
         return time += 1;
     } else {
+        drawLocations();
         return time
     }
 }
