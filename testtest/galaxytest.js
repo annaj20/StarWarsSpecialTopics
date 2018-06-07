@@ -252,8 +252,9 @@ function colorLocations() {
             if (item.length > 0) {
                 for (let location of item) {
                     if (location === place.name) {
-                        place.color = Math.round(0.99 * place.color);
-                        place.radius = Math.round(1.02 * place.radius);
+                        place.color = "rgb(255, 0, 0)";
+                        place.radius = Math.round(1.5 * place.radius);
+                        place.color = "rgb(255, 255, 255)";
                     }
                 }
             }
