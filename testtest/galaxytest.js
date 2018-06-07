@@ -254,7 +254,6 @@ function colorLocations() {
                     if (location === place.name) {
                         place.color = "rgb(255, 0, 0)";
                         place.radius = 1.001 * place.radius;
-                        #place.color = 255;
                     }
                 }
             }
@@ -264,8 +263,10 @@ function colorLocations() {
 }
 
 function drawLocation(place) {
-    ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
-    fill(place.color, place.color, place.color);
+    setTimeout(function(){
+        ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
+        fill(255, 255, 255);
+    }, 500);     
 }
 
 function drawLocations() {
