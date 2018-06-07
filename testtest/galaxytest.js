@@ -253,7 +253,9 @@ function colorLocations() {
                 for (let location of item) {
                     if (location === place.name) {
                         place.color = "rgb(255, 0, 0)";
-                        place.radius = 1.001 * place.radius;
+                        setTimeout(function(){
+                            place.radius = 1.001 * place.radius;
+                            }, 500); 
                     }
                 }
             }
@@ -263,11 +265,9 @@ function colorLocations() {
 }
 
 function drawLocation(place) {
-    setTimeout(function(){
-        ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
-        fill(255, 255, 255);
-    }, 500);     
-}
+    ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
+    fill(255, 255, 255);
+   }
 
 function drawLocations() {
     // draw nodes
