@@ -254,7 +254,7 @@ function colorLocations() {
                     if (location === place.name) {
                         place.color = "rgb(255, 0, 0)";
                         setTimeout(function(){
-                            place.radius = 1.001 * place.radius;
+                            place.radius = Math.round(1.001 * place.radius);
                             }, 500); 
                     }
                 }
