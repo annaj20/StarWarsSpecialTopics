@@ -254,7 +254,7 @@ function colorLocations() {
                     if (location === place.name) {
                         place.color = "rgb(255, 0, 0)";
                         place.radius = Math.round(1.5 * place.radius);
-                        place.color = "rgb(255, 255, 255)";
+                        place.color = 255;
                     }
                 }
             }
