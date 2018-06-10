@@ -255,11 +255,9 @@ function colorLocations() {
                         flashLocation(place);
                         place.color = Math.round(0.99 * place.color);
                         place.radius = Math.min(place.radius + 1, 25);
-                        setTimeout(drawLocation(place), 500);
-                    } else {
-                        drawLocation(place);
                     }
                 }
+                setTimeout(drawLocation(place), 500);
             }
         }
     }
