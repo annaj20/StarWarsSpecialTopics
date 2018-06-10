@@ -257,7 +257,7 @@ function colorLocations() {
                         place.radius = Math.min(place.radius + 1, 25);
                     }
                 }
-                setTimeout(drawLocation(place), 500);
+                setTimeout(drawLocation(place), 2000);
             }
         }
     }
