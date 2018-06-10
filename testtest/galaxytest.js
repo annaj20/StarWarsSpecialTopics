@@ -252,17 +252,20 @@ function colorLocations() {
             if (item.length > 0) {
                 for (let location of item) {
                     if (location === place.name) {
-                        place.color = Math.round(0.99 * place.color);
-                        console.log(place.radius);
+                        flashLocation(place);
+//                         place.color = Math.round(0.99 * place.color);
                         place.radius = Math.min(place.radius + 1, 25);
-                        console.log(place.name);
-                        console.log(place.radius);
                     }
                 }
             }
         }
         drawLocation(place);
     }
+}
+
+function flashLocation(place) {
+    ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
+    fill(255, 0, 0);
 }
 
 function drawLocation(place) {
