@@ -253,7 +253,7 @@ function colorLocations() {
                 for (let location of item) {
                     if (location === place.name) {
                         flashLocation(place);
-//                         place.color = Math.round(0.99 * place.color);
+                        place.color = Math.round(0.99 * place.color);
                         place.radius = Math.min(place.radius + 1, 25);
                     }
                 }
