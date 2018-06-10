@@ -252,13 +252,9 @@ function colorLocations() {
             if (item.length > 0) {
                 for (let location of item) {
                     if (location === place.name) {
-                        if (place.name === 'Kamino') alert('nihao')
                         flashLocation(place);
                         place.color = Math.round(0.99 * place.color);
-                        console.log(place.name);
-                        console.log(place.radius);
                         place.radius = Math.min(place.radius + 1, 25);
-                        console.log(place.radius);
                     }
                 }
             }
