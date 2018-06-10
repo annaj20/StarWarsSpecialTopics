@@ -254,12 +254,15 @@ function colorLocations() {
                     if (location === place.name) {
                         flashLocation(place);
                         place.color = Math.round(0.99 * place.color);
+                        console.log(place.name);
+                        console.log(place.radius);
                         place.radius = Math.min(place.radius + 1, 25);
+                        console.log(place.radius);
                     }
                 }
-                setTimeout(drawLocation(place), 2000);
             }
         }
+        drawLocation(place);
     }
 }
 
