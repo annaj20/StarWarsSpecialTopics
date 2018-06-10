@@ -253,7 +253,10 @@ function colorLocations() {
                 for (let location of item) {
                     if (location === place.name) {
                         place.color = Math.round(0.99 * place.color);
+                        console.log(place.radius);
                         place.radius = Math.min(place.radius + 1, 25);
+                        console.log(place.name);
+                        console.log(place.radius);
                     }
                 }
             }
