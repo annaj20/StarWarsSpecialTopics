@@ -1,5 +1,5 @@
 ship	leg	departure	arrival	startx	starty	destinationx	destinationy
-0 1 9 14  302 715 944	605
+0	1	9	14	302	715	944	605
 1	1	9	14	302	715	944	605
 2	1	12	17	302	715	944	605
 3	1	18	23	302	715	944	605
