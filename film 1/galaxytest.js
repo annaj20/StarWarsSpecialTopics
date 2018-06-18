@@ -328,7 +328,10 @@ function setup() {
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
         current_ship = shipdata[i]
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], shp, current_ship))
+        temp_ship.offset.x = i * 2
+        temp_ship.offset.y = i * 2
+        temp_ship = (new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], shp, current_ship))
+        ships.push(temp_ship)
     }
 
     // Set values for data, and display the background image
