@@ -355,7 +355,7 @@ function setup() {
 //    temp_ship.offset.y = i * 2
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship))
 }
-    }
+    
 
     // Set values for data, and display the background image
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
