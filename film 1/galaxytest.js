@@ -28,7 +28,7 @@ let places = [{
     },
     {
         name: "Coruscant",
-        coordinates: [538, 351],
+        coordinates: [540, 351],
         color: 255, 
         radius: 10
     },
