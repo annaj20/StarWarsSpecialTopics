@@ -29,7 +29,7 @@ let places = [
     },
     {
         name: "Coruscant",
-        coordinates: [538, 351],
+        coordinates: [545, 355],
         color: 255, 
         radius: 10
     },
@@ -53,7 +53,7 @@ let places = [
     },
     {
         name: "Kashyyyk",
-        coordinates: [830, 344],
+        coordinates: [835, 350],
         color: 255, 
         radius: 10
     },
@@ -83,7 +83,7 @@ let places = [
     },
     {
         name: "Hoth",
-        coordinates: [492, 703],
+        coordinates: [495, 703],
         color: 255, 
         radius: 10
     },
