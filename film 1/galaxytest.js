@@ -350,9 +350,6 @@ function setup() {
     } else if (i == 4){
       icon = anakin
     }
-//    temp_ship = new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship)
-//    temp_ship.offset.x = i * 2
-//    temp_ship.offset.y = i * 2
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship, i*2, i*2))
 }
     
