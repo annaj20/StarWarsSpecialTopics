@@ -283,8 +283,13 @@ function drawLocations() {
 
 
 function preload() {
-    shp = loadImage("ship.png");
+    defaultimage = loadImage("ship.png");
     stars = loadImage("galaxymap-1.jpg")
+    quigon = loadImage("quigon.png")
+    obiwan = loadImage("obiwan.png")
+    padme = loadImage("padme.png")
+    anakin = loadImage("anakin.png")    
+    r2d2 = loadImage("r2d2.png")
 
     // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
@@ -328,7 +333,18 @@ function setup() {
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
         current_ship = shipdata[i]
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], shp, current_ship))
+         icon = defaultimage
+         if (i == 0){
+            icon = quigon
+        } else if (i == 1){
+            icon = obiwan
+        } else if (i == 2){
+            icon = padme
+        } else if (i == 3){ 
+            icon = r2d2
+        } else if (i == 4){
+            icon = anakin
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], defaultimage, current_ship))
     }
 
     // Set values for data, and display the background image
