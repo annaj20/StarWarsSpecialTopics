@@ -353,7 +353,7 @@ function setup() {
 //    temp_ship = new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship)
 //    temp_ship.offset.x = i * 2
 //    temp_ship.offset.y = i * 2
-    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship)
+    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship, i*2, i*2))
 }
     
 
@@ -409,8 +409,9 @@ function timeflow(time, speedoftime) {
 
 class Ship {
     // Constructor for ship
-    constructor(x, y, icon, data) {
+    constructor(x, y, icon, data, offsetx, offsety) {
         this.pos = createVector(x, y);
+        this.offset = createVector(offsetx, offsety)
         this.c = color(255);
         this.icon = icon;
         this.data = data;
@@ -470,6 +471,6 @@ class Ship {
     // Display the object
     display() {
         imageMode(CENTER);
-        image(this.icon, this.pos.x, this.pos.y, icon.width / 4, icon.height / 4);
+        image(this.icon, this.pos.x +this.offset.x, this.pos.y +this.offset.y, icon.width / 4, icon.height / 4);
     }
 }
