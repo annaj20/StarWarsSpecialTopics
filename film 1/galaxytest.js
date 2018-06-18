@@ -470,6 +470,6 @@ class Ship {
     // Display the object
     display() {
         imageMode(CENTER);
-        image(this.icon, this.pos.x+this.offset.x, this.pos.y+this.offset.y, icon.width / 8, icon.height / 8);
+        image(this.icon, this.pos.x+this.offset.x, this.pos.y+this.offset.y, icon.width / 4, icon.height / 4);
     }
 }
