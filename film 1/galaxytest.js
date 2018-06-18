@@ -14,8 +14,7 @@ let frameadjust;
 let ships = [];
 let shipdata = [];
 let data;
-let places = [
-    {
+let places = [{
         name: "Naboo",
         coordinates: [746, 641],
         color: 255, 
@@ -29,7 +28,7 @@ let places = [
     },
     {
         name: "Coruscant",
-        coordinates: [545, 355],
+        coordinates: [538, 351],
         color: 255, 
         radius: 10
     },
@@ -53,7 +52,7 @@ let places = [
     },
     {
         name: "Kashyyyk",
-        coordinates: [835, 350],
+        coordinates: [830, 344],
         color: 255, 
         radius: 10
     },
@@ -83,7 +82,7 @@ let places = [
     },
     {
         name: "Hoth",
-        coordinates: [495, 703],
+        coordinates: [492, 703],
         color: 255, 
         radius: 10
     },
