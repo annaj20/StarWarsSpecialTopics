@@ -52,7 +52,7 @@ let places = [{
     },
     {
         name: "Kashyyyk",
-        coordinates: [830, 344],
+        coordinates: [832, 342],
         color: 255, 
         radius: 10
     },
