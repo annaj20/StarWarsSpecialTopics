@@ -344,7 +344,7 @@ function setup() {
             icon = r2d2
         } else if (i == 4){
             icon = anakin
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], defaultimage, current_ship))
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship))
     }
 
     // Set values for data, and display the background image
