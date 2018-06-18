@@ -2,6 +2,12 @@ let mybubble;
 let shp;
 let stars;
 let time;
+let icon;
+let r2d2;
+let padme;
+let quigon;
+let obiwan;
+let anakin;
 let speedoftime;
 let goal;
 let startingframes;
@@ -344,6 +350,7 @@ function setup() {
             icon = r2d2
         } else if (i == 4){
             icon = anakin
+        }
         ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship))
     }
 
