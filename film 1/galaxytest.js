@@ -1,5 +1,10 @@
 let mybubble;
-let shp;
+let icon;
+let quigon;
+let obiwan;
+let padme;
+let r2d2;
+let anakin;
 let stars;
 let time;
 let speedoftime;
@@ -283,8 +288,13 @@ function drawLocations() {
 
 
 function preload() {
-    shp = loadImage("ship.png");
-    stars = loadImage("galaxymap-1.jpg")
+    defaultimage = loadImage("ship.png");
+    stars = loadImage("galaxymap-1.jpg");
+    quigon = loadImage("quigon.png");
+    obiwan = loadImage("obiwan.png");
+    padme = loadImage("padme.png");
+    r2d2 = loadImage("r2d2.png");
+    anakin = loadImage("anakin.png");
 
     // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
@@ -327,8 +337,24 @@ function setup() {
     }
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
-        current_ship = shipdata[i]
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], shp, current_ship))
+    current_ship = shipdata[i]
+    icon = defaultimage
+    if (i == 0){
+      icon = quigon
+    } else if (i == 1){
+      icon = obiwan
+    } else if (i == 2){
+      icon = padme
+    } else if (i == 3){
+      icon = r2d2
+    } else if (i == 4){
+      icon = anakin
+    }
+    temp_ship = new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship)
+    temp_ship.offset.x = i * 2
+    temp_ship.offset.y = i * 2
+    ships.push(temp_ship)
+}
     }
 
     // Set values for data, and display the background image
@@ -444,6 +470,6 @@ class Ship {
     // Display the object
     display() {
         imageMode(CENTER);
-        image(this.icon, this.pos.x, this.pos.y, shp.width / 4, shp.height / 4);
+        image(this.icon, this.pos.x + this.offset.x, this.pos.y + this.offset.y, icon.width / 4, icon.height / 4);
     }
 }
