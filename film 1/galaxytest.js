@@ -266,6 +266,12 @@ let mentioned_locations = [['Naboo', 'Naboo'],
         //drawLocation(place);
 //    }
 //}
+function colorLocations() {
+        for (let i = 0; i > mentioned_locations.length; i++) {
+                if (i = time) {
+                        
+        
+
 
 function colorLocations() {
         for (let i = 0; i > mentioned_locations.length; i++) {
