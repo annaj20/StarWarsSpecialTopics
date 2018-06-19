@@ -253,7 +253,6 @@ let mentioned_locations = [['Coruscant', 'Naboo', 'Coruscant', 'Naboo', 'Naboo']
 
 function colorLocations(time) {
     let item;
-    console.log(time);
     for (let place of places) {
         item = mentioned_locations[time];
         if (!!item) {
