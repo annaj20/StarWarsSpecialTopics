@@ -282,7 +282,7 @@ function colorLocations() {
                                 }
                         }
                 }
-                drawLocations(place);
+                drawLocation(place);
         }
 }
                                        
@@ -383,7 +383,7 @@ function setup() {
     frameadjust = -20;
 
     // draw nodes
-    colorLocations();
+    drawLocations();
 }
 
 
@@ -417,10 +417,10 @@ function draw() {
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
         // draw nodes
-        // colorLocations();
+        colorLocations();
         return time += 1;
     } else {
-            //drawLocations();
+            drawLocations();
             return time
     }
             
