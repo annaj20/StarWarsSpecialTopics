@@ -308,7 +308,7 @@ function drawLocations() {
 
 
 function preload() {
-    defaultimage = loadImage("ship.png");
+    defaultimage = ellipse(x, y, 5, 5);
     stars = loadImage("galaxymap-1.jpg");
 
     // Load data from a TSV file
