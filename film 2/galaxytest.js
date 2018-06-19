@@ -251,12 +251,12 @@ let mentioned_locations = [['Coruscant', 'Naboo', 'Coruscant', 'Naboo', 'Naboo']
  ['Naboo'],
  []];
 
-function colorLocations (time) {
-    for (i = 0; i < mentioned_locations.length; i++) {
-        if (i == time) {
-            if (mentioned_locations[i].length > 1) {
-                for (let place of places) {
-                    if (mentioned_locations[i] == place.name) {
+function colorLocations() {
+    for (let place of places) {
+        for (let item of mentioned_locations) {
+            if (item.length > 0) {
+                for (let location of item) {
+                    if (location === place.name) {
                         flashLocation(place);
                         place.color = Math.round(0.99 * place.color);
                         place.radius = Math.min(place.radius + 1, 25);
@@ -264,8 +264,8 @@ function colorLocations (time) {
                 }
             }
         }
+        drawLocation(place);
     }
-    drawLocations(place);
 }
             
                     
