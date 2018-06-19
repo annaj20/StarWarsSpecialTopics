@@ -375,6 +375,9 @@ function draw() {
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
+    
+    // draw nodes
+    colorLocations(time);
 }
 
 
@@ -384,8 +387,6 @@ function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
         return time += 1;
     } else {
-        // draw nodes
-        colorLocations(time);
         return time
     }
 }
