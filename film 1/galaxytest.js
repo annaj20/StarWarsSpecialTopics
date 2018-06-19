@@ -250,22 +250,44 @@ let mentioned_locations = [['Naboo', 'Naboo'],
     []];
 
 
+//function colorLocations() {
+  //  for (let place of places) {
+    //    for (let item of mentioned_locations) {
+      //      if (item.length > 0) {
+        //        for (let location of item) {
+          //          if (location === place.name) {
+            //            flashLocation(place);
+              //          place.color = Math.round(0.99 * place.color);
+                //        place.radius = Math.min(place.radius + 1, 25);
+                  //  }
+                //}
+            //}
+       // }
+        //drawLocation(place);
+//    }
+//}
+
 function colorLocations() {
-    for (let place of places) {
-        for (let item of mentioned_locations) {
-            if (item.length > 0) {
-                for (let location of item) {
-                    if (location === place.name) {
-                        flashLocation(place);
-                        place.color = Math.round(0.99 * place.color);
-                        place.radius = Math.min(place.radius + 1, 25);
-                    }
+        for (let i = 0; i > mentioned_locations.length; i++) {
+                if (i == time) {
+                        if (item.length > 0) {
+                                for (let place of places) {
+                                        if (item === place.name) {
+                                                flashLocation(place);
+                                                place.color = Math.round(0.99 * place.color);
+                                                place.radius = Math.min(place.radius + 1, 25);
+                                        }
+                                }
+                        }
                 }
-            }
+                drawLocation(place);
         }
-        drawLocation(place);
-    }
 }
+
+                                                
+                                                          
+
+        
 
 function flashLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
@@ -362,7 +384,7 @@ function setup() {
     frameadjust = -20;
 
     // draw nodes
-    drawLocations();
+    // drawLocations();
 }
 
 
@@ -395,7 +417,7 @@ function draw() {
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
         // draw nodes
-        colorLocations();
+        // colorLocations();
         return time += 1;
     } else {
         drawLocations();
