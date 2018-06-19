@@ -265,7 +265,7 @@ function colorLocations (time) {
             }
         }
     }
-    drawLocations)place);
+    drawLocations(place);
 }
             
                     
