@@ -385,7 +385,7 @@ function setup() {
     frameadjust = -20;
 
     // draw nodes
-    // drawLocations();
+    drawLocations();
 }
 
 
