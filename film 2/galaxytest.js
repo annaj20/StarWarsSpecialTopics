@@ -383,7 +383,6 @@ function draw() {
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
         // draw nodes
-        drawLocations();
         return time += 1;
     } else {
         colorLocations(time);
