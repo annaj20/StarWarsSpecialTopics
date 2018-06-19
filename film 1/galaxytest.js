@@ -282,7 +282,7 @@ function colorLocations() {
                                 }
                         }
                 }
-                drawLocation(place);
+                drawLocations(place);
         }
 }
                                        
