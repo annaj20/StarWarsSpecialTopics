@@ -235,14 +235,16 @@ let mentioned_locations = [['Hoth'],
  []];
 
 
-function colorLocations() {
+function colorLocations(time) {
+    let item;
     for (let place of places) {
-        for (let item of mentioned_locations) {
+        item = mentioned_locations[time];
+        if (!!item) {
             if (item.length > 0) {
                 for (let location of item) {
                     if (location === place.name) {
                         flashLocation(place);
-                        place.color = Math.round(0.99 * place.color);
+//                         place.color = Math.round(0.99 * place.color);
                         place.radius = Math.min(place.radius + 1, 25);
                     }
                 }
@@ -354,6 +356,9 @@ function draw() {
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
+    
+    // draw nodes
+    colorLocations(time);
 }
 
 
@@ -361,11 +366,8 @@ function draw() {
 // By default, this is set per 60 frames (so time = 1 is one second)
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
-        // draw nodes
-        colorLocations();
         return time += 1;
     } else {
-        drawLocations();
         return time
     }
 }
