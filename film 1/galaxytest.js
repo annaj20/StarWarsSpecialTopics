@@ -1,10 +1,5 @@
 let mybubble;
-let icon;
-let quigon;
-let obiwan;
-let padme;
-let r2d2;
-let anakin;
+let c;
 let stars;
 let time;
 let speedoftime;
@@ -315,11 +310,6 @@ function drawLocations() {
 function preload() {
     defaultimage = loadImage("ship.png");
     stars = loadImage("galaxymap-1.jpg");
-    quigon = loadImage("quigon.png");
-    obiwan = loadImage("obiwan.png");
-    padme = loadImage("padme.png");
-    r2d2 = loadImage("r2d2.png");
-    anakin = loadImage("anakin.png");
 
     // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
@@ -363,19 +353,19 @@ function setup() {
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
     current_ship = shipdata[i]
-    icon = defaultimage
+    c = defaultimage
     if (i == 0){
-      icon = quigon
+      c = color(255,255,255)
     } else if (i == 1){
-      icon = obiwan
+      c = color(240,125,0)
     } else if (i == 2){
-      icon = padme
+      c = color(242,45,109)
     } else if (i == 3){
-      icon = r2d2
+      c = color(0,110,191)
     } else if (i == 4){
-      icon = anakin
+      c = color(0,0,0)
     }
-    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], icon, current_ship, i*2, i*2))
+    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*2, i*2))
 }
     
 
@@ -433,11 +423,10 @@ function timeflow(time, speedoftime) {
 
 class Ship {
     // Constructor for ship
-    constructor(x, y, icon, data, offsetx, offsety) {
+    constructor(x, y, c, data, offsetx, offsety) {
         this.pos = createVector(x, y);
         this.offset = createVector(offsetx, offsety)
-        this.c = color(255);
-        this.icon = icon;
+        this.c = c;
         this.data = data;
         this.speed = 1;
         this.frameadjust = 0;
@@ -495,6 +484,7 @@ class Ship {
     // Display the object
     display() {
         imageMode(CENTER);
-        image(this.icon, this.pos.x +this.offset.x, this.pos.y +this.offset.y, icon.width / 4, icon.height / 4);
+        fill(color) 
+        ellipse(x, y, height, width);
     }
 }
