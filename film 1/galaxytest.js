@@ -285,10 +285,8 @@ function colorLocations() {
                 drawLocation(place);
         }
 }
-                                                          
-                                                          
-
-        
+                                       
+   
 
 function flashLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
