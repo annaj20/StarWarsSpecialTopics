@@ -278,7 +278,6 @@ function colorLocations() {
                                                         place.color = Math.round(0.99 * place.color);
                                                         place.radius = Math.min(place.radius + 1, 25);
                                                 }
-                                                  
                                         }
                                 }
                         }
@@ -286,6 +285,8 @@ function colorLocations() {
                 drawLocation(place);
         }
 }
+
+                                                
 
 
 function flashLocation(place) {
