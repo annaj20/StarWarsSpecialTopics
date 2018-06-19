@@ -251,9 +251,11 @@ let mentioned_locations = [['Coruscant', 'Naboo', 'Coruscant', 'Naboo', 'Naboo']
  ['Naboo'],
  []];
 
-function colorLocations() {
+function colorLocations(time) {
+    let item;
     for (let place of places) {
-        for (let item of mentioned_locations) {
+        item = mentioned_locations[time];
+        if (!!item) {
             if (item.length > 0) {
                 for (let location of item) {
                     if (location === place.name) {
@@ -380,7 +382,7 @@ function draw() {
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
         // draw nodes
-        colorLocations();
+        colorLocations(time);
         return time += 1;
     } else {
         drawLocations();
