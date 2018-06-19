@@ -269,15 +269,16 @@ let mentioned_locations = [['Naboo', 'Naboo'],
 
 function colorLocations() {
         for (let i = 0; i > mentioned_locations.length; i++) {
-                if (i == time) {
+                for (let place of place) {
                         for (let item of mentioned_locations) {
                                 if (item.length > 0) {
-                                        for (let place of places) {
-                                                if (item === place.name) {
+                                        for (let location of item) {
+                                                if (location === place.name && i = time) {
                                                         flashLocation(place);
                                                         place.color = Math.round(0.99 * place.color);
                                                         place.radius = Math.min(place.radius + 1, 25);
                                                 }
+                                                  
                                         }
                                 }
                         }
@@ -285,8 +286,7 @@ function colorLocations() {
                 drawLocation(place);
         }
 }
-                                       
-   
+
 
 function flashLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
