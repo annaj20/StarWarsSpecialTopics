@@ -420,10 +420,11 @@ function timeflow(time, speedoftime) {
         // draw nodes
         colorLocations();
         return time += 1;
-    }// else {
-       // drawLocations();
-        //return time
-    //}
+    } else {
+            drawLocations();
+            return time
+    }
+            
 }
 
 class Ship {
