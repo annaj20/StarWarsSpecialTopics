@@ -344,8 +344,7 @@ function setup() {
     goal = 0;
     frameadjust = -20;
 
-    // draw nodes
-    drawLocations();
+    
 }
 
 
@@ -353,6 +352,11 @@ function draw() {
     // Draw background
     imageMode(CORNER);
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
+    
+    // draw nodes
+    for (let place in place) {
+        colorLocations(place);
+    }
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
