@@ -382,9 +382,9 @@ function draw() {
 // By default, this is set per 60 frames (so time = 1 is one second)
 function timeflow(time, speedoftime) {
     if (frameCount % (speedoftime * 60) === 0) {
-        // draw nodes
         return time += 1;
     } else {
+        // draw nodes
         colorLocations(time);
         return time
     }
