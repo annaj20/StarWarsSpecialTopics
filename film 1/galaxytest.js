@@ -419,7 +419,7 @@ function timeflow(time, speedoftime) {
         colorLocations();
         return time += 1;
     } else {
-            drawLocations();
+            //drawLocations();
             return time
     }
             
