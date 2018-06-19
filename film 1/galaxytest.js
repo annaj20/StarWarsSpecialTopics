@@ -452,9 +452,9 @@ class Ship {
             if (dep == arv) {
                 arv = arv + 1
                 this.frameadjust = frameadjust
-            } else {
-                this.frameadjust = 0
-            }
+            } //else {
+              //  this.frameadjust = 0
+            //}
 
             if (time >= dep && time < arv) {
                 it = true;
