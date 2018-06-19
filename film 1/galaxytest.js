@@ -355,15 +355,15 @@ function setup() {
     current_ship = shipdata[i]
     c = defaultimage
     if (i == 0){
-      c = color.rgb(255, 255, 255)
+      c = color(255, 255, 255)
     } else if (i == 1){
-      c = color.rgb(240, 125, 0)
+      c = color(240, 125, 0)
     } else if (i == 2){
-      c = color.rgb(242, 45, 109)
+      c = color(242, 45, 109)
     } else if (i == 3){
-      c = color.rgb(0, 110, 191)
+      c = color(0, 110, 191)
     } else if (i == 4){
-      c = color.rgb(0, 0, 0)
+      c = color(0, 0, 0)
     }
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*2, i*2))
 }
