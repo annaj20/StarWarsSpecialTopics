@@ -275,7 +275,7 @@ function drawLocations() {
 
 function preload() {
     shp = loadImage("ship.png");
-    stars = loadImage("galaxymap-1.jpg")
+    stars = loadImage("galaxymap-2.jpg")
 
     // Load data from a TSV file
     data = loadTable("data.tsv", "tsv", "header")
