@@ -369,7 +369,7 @@ function setup() {
     } else if (i == 4){
       c = color(0, 0, 0)
     }
-    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*5, i*5))
+    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
 }
     
 
@@ -489,6 +489,6 @@ class Ship {
     display() {
         imageMode(CENTER);
         fill(this.c) 
-        ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 8, 8);
+        ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 9, 9);
     }
 }
