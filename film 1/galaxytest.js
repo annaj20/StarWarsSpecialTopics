@@ -388,7 +388,9 @@ function draw() {
     // Draw background
     imageMode(CORNER);
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
-    
+        
+    // draw nodes
+     colorLocations(time);
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
@@ -407,8 +409,7 @@ function draw() {
     // Check if time should move forward
     time = timeflow(time, speedoftime);
         
-    // draw nodes
-     colorLocations(time);
+    
 }
 
 
