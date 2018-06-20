@@ -367,7 +367,7 @@ function setup() {
     } else if (i == 4){
       c = color(0, 0, 0)
     }
-    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*6, i*6))
+    ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*10, i*10))
 }
     
 
