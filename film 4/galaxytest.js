@@ -317,7 +317,7 @@ function setup() {
         current_ship = shipdata[i]
         c = defaultimage
         if (i == 0){
-            c = color(0, 0, 0)
+            c = color(133, 136, 139)
         } else if (i == 1){
             c = color(153, 179, 245)
         } else if (i == 2){
