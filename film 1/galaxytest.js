@@ -491,6 +491,6 @@ class Ship {
     display() {
         imageMode(CENTER);
         fill(this.c) 
-        ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 9, 9);
+        //ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 9, 9);
     }
 }
