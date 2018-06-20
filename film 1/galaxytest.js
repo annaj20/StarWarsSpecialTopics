@@ -395,7 +395,7 @@ function draw() {
      colorLocations(time);
 
     // Update each ship
-    for (i = 0; i < ships.length; i++) {
+    for (i = 0; i < ships.length - 1; i++) {
         current_ship = ships[i]
 
         // Check if ship is in transit
