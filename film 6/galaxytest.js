@@ -307,8 +307,8 @@ function setup() {
             c = color(239, 207, 168)
         } else if (i == 6){
             c = color(255, 193, 0)            
-        }          
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship. i*4, i*4))
+        }         
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
     }
 
     // Set values for data, and display the background image
@@ -365,7 +365,7 @@ class Ship {
     // Constructor for ship
     constructor(x, y, c, data, offsetx, offsety) {
         this.pos = createVector(x, y);
-        this.offset = createVector(offsetx, offsety)
+        this.offset = createVector(offsetx, offsety);
         this.c = c;
         this.data = data;
         this.speed = 1;
