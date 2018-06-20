@@ -281,6 +281,10 @@ function preload() {
 
 function setup() {
     createCanvas(1263, 902);
+    
+    // draw nodes
+    drawLocations();
+    
     for (i = 0; i < data.getRowCount(); i++) {
         // get the data from table
         ship_id = data.getNum(i, 0)
@@ -344,8 +348,7 @@ function setup() {
     goal = 0;
     frameadjust = -20;
 
-    // draw nodes
-    drawLocations();
+    
 }
 
 
@@ -354,6 +357,9 @@ function draw() {
     imageMode(CORNER);
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
 
+    // draw nodes
+    colorLocations(time);
+    
     // Update each ship
     for (i = 0; i < ships.length; i++) {
         current_ship = ships[i]
@@ -371,8 +377,7 @@ function draw() {
     // Check if time should move forward
     time = timeflow(time, speedoftime);
     
-    // draw nodes
-    colorLocations(time);
+    
 }
 
 
