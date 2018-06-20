@@ -358,17 +358,19 @@ function setup() {
     for (i = 0; i < shipdata.length; i++) {
     current_ship = shipdata[i]
     c = defaultimage
-    if (i == 4){
-            c = color(133, 136, 139)
+    if (i == 0){
+            
+            c = color(255, 255, 255)
     } else if (i == 1){
       c = color(240, 125, 0)
     } else if (i == 2){
       c = color(242, 45, 109)
     } else if (i == 3){
       c = color(0, 110, 191)
-    } else{
+    } else if (i == 4){
       
-      c = color(255, 255, 255)
+            c = color(133, 136, 139)
+      
     }
             
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
@@ -408,8 +410,11 @@ function draw() {
         // If ship is in transit, move according to which leg of the journey it is on
         if (goal[0]) {
             current_ship.move(current_ship.data.journey[goal[1]].destination[0], current_ship.data.journey[goal[1]].destination[1], current_ship.data.journey[goal[1]].arrival);
-        } console.log(i)
-            console.log(current_ship)
+        } 
+            if (i === 4) {
+                console.log(i)
+                console.log(current_ship)
+            }
         // Draw ship
             current_ship.display();
     }
