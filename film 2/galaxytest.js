@@ -351,7 +351,7 @@ function setup() {
         } else if (i == 5){
             c = color(0, 137, 0)
         }
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*5, i*5))
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
     }
 
     // Set values for data, and display the background image
