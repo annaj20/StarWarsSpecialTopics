@@ -13,97 +13,97 @@ let places = [{
         name: "Naboo",
         coordinates: [746, 641],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Tatooine",
         coordinates: [944, 605],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Coruscant",
         coordinates: [540, 351],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Kamino",
         coordinates: [1026, 556],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Geonosis",
         coordinates: [937, 643],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Utapau",
         coordinates: [685, 779],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Kashyyyk",
         coordinates: [832, 342],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Mustafar",
         coordinates: [558, 752],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Polis Massa",
         coordinates: [531, 785],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Alderaan",
         coordinates: [683, 359],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Yavin VI",
         coordinates: [817, 197],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Hoth",
         coordinates: [492, 703],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Dagobah",
         coordinates: [682, 732],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Bespin",
         coordinates: [482, 686],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Endor",
         coordinates: [347, 631],
         color: 255, 
-        radius: 10
+        radius: 15
     },
     {
         name: "Sullust",
         coordinates: [670, 651],
         color: 255, 
-        radius: 10
+        radius: 15
     }
 ];
 
