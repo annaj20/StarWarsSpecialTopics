@@ -348,8 +348,10 @@ function setup() {
             c = color(240, 125, 0)
         } else if (i == 4){
             c = color(255, 193, 0)
-        } else (i == 5){
+        } else if (i == 5){
             c = color(0, 137, 0)
+        } else {
+            return false
         }
         ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
     }
