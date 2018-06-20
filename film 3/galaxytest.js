@@ -30,7 +30,7 @@ let places = [
     },
     {
         name: "Kamino",
-        coordinates: [1011, 571],
+        coordinates: [1011, 566],
         color: 255, 
         radius: 10
     },
