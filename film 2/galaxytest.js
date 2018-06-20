@@ -290,7 +290,7 @@ function drawLocations() {
     }
 }
 
-function whiteLocations {
+function whiteLocations () {
     for (let place in places) {
         place.color(255, 255, 255);
     }
