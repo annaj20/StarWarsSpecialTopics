@@ -351,7 +351,7 @@ function setup() {
         } else if (i == 1){
             c = color(0, 110, 191)
         } else if (i == 2){
-            c = color(0, 0, 0)
+            c = color(133, 136, 139)
         } else if (i == 3){
             c = color(240, 125, 0)
         } else if (i == 4){
