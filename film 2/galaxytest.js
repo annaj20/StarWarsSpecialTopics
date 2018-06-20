@@ -270,7 +270,9 @@ function colorLocations(time) {
     }
 }
             
-                    
+function colorNaboo () {
+    mentioned_locations[0].color = 255;
+}
 
 function flashLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
@@ -287,12 +289,6 @@ function drawLocations() {
     for (let w = 0; w < places.length; w++) {
         let place = places[w];
         drawLocation(place);
-    }
-}
-
-function whiteLocations () {
-    for (let place in places) {
-        place.color(255, 255, 255);
     }
 }
 
@@ -361,8 +357,11 @@ function setup() {
         
         }
         ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
-        whiteLocations;
+        
     }
+    
+    // color Naboo
+    colorNaboo;
 
     // Set values for data, and display the background image
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
