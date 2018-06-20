@@ -1,5 +1,5 @@
 let mybubble;
-let shp;
+let c;
 let stars;
 let time;
 let speedoftime;
@@ -292,7 +292,7 @@ function drawLocations() {
 
 
 function preload() {
-    shp = loadImage("ship.png");
+    defaultimage = loadImage("ship.png");
     stars = loadImage("galaxymap-2.jpg")
 
     // Load data from a TSV file
@@ -337,7 +337,21 @@ function setup() {
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
         current_ship = shipdata[i]
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], shp, current_ship))
+        c = defaultimage
+        if (i == 0){
+            c = color(242, 45, 109)
+        } else if (i == 1){
+            c = color(0, 110, 191)
+        } else if (i == 2){
+            c = color(0, 0, 0)
+        } else if (i == 3){
+            c = color(240, 125, 0)
+        } else if (i == 4){
+            c = color(255, 193, 0)
+        } else if (i == 5){
+            c = color(0, 137, 0)
+        }
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*5, i*5))
     }
 
     // Set values for data, and display the background image
@@ -392,10 +406,10 @@ function timeflow(time, speedoftime) {
 
 class Ship {
     // Constructor for ship
-    constructor(x, y, icon, data) {
+    constructor(x, y, c, data, offsetx, offsety) {
         this.pos = createVector(x, y);
-        this.c = color(255);
-        this.icon = icon;
+        this.offset = createVector(offsetx, offsety)
+        this.c = c;
         this.data = data;
         this.speed = 1;
         this.frameadjust = 0;
@@ -453,6 +467,7 @@ class Ship {
     // Display the object
     display() {
         imageMode(CENTER);
-        image(this.icon, this.pos.x, this.pos.y, shp.width / 4, shp.height / 4);
+        fill(this.c) 
+        ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 30, 30);
     }
 }
