@@ -1,4 +1,3 @@
-let mybubble;
 let c;
 let stars;
 let time;
@@ -266,26 +265,6 @@ function colorLocations(time) {
 
                         
         
-
-
-//function colorLocations() {
-  //      for (let i = 0; i > mentioned_locations.length; i++) {
-    //            for (let place of place) {
-      //                  for (let item of mentioned_locations) {
-        //                        if (item.length > 0) {
-          //                              for (let location of item) {
-            //                                    if (location === place.name && i = time) {
-              //                                          flashLocation(place);
-                //                                        place.color = Math.round(0.99 * place.color);
-                  //                                      place.radius = Math.min(place.radius + 1, 25);
-                    //                            }
-                      //                  }
-                        //        }
-      //                  }
-        //        }
-          //      drawLocation(place);
-   //     }
-//}
 
                                                 
 
