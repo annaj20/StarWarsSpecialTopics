@@ -334,7 +334,7 @@ function setup() {
     // Create Ship objects for each ship journey
     for (i = 0; i < shipdata.length; i++) {
         current_ship = shipdata[i]
-        c = defailtimage
+        c = defaultimage
         if (i == 0){
             c = color(255, 0, 0)
         } else if (i == 1){
