@@ -393,6 +393,8 @@ function draw() {
         
     // draw nodes
      colorLocations(time);
+     
+     console.log(ships.length)
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
@@ -406,11 +408,10 @@ function draw() {
             current_ship.move(current_ship.data.journey[goal[1]].destination[0], current_ship.data.journey[goal[1]].destination[1], current_ship.data.journey[goal[1]].arrival);
         }
         // Draw ship
-        //current_ship.display();
+            current_ship.display();
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
-        console.log(places[0].color);
     
 }
 
