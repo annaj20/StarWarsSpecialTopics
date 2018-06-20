@@ -369,7 +369,9 @@ function setup() {
     } else if (i == 4){
      // c = color(133, 136, 139)
     }
+            
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
+           
 }
         
     
@@ -405,7 +407,8 @@ function draw() {
         // If ship is in transit, move according to which leg of the journey it is on
         if (goal[0]) {
             current_ship.move(current_ship.data.journey[goal[1]].destination[0], current_ship.data.journey[goal[1]].destination[1], current_ship.data.journey[goal[1]].arrival);
-        }
+        } console.log(i)
+            console.log(current_ship)
         // Draw ship
             current_ship.display();
     }
