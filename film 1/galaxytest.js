@@ -260,7 +260,7 @@ function colorLocations(time) {
                 }
             }
         }
-      //  drawLocation(place);
+      drawLocation(place);
     }
 }
 
@@ -297,7 +297,7 @@ function flashLocation(place) {
 
 function drawLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
-    fill(place.color, place.color, place.color);
+    fill(255, 255, 255);
 }
 
 function drawLocations() {
@@ -393,8 +393,7 @@ function draw() {
         
     // draw nodes
      colorLocations(time);
-     
-     console.log(ships.length)
+    
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
@@ -491,6 +490,6 @@ class Ship {
     display() {
         imageMode(CENTER);
         fill(this.c) 
-        //ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 9, 9);
+        ellipse(this.pos.x+this.offset.x, this.pos.y+this.offset.y, 9, 9);
     }
 }
