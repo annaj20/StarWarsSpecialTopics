@@ -395,7 +395,7 @@ function draw() {
      colorLocations(time);
 
     // Update each ship
-    for (i = 0; i < ships.length - 1; i++) {
+    for (i = 0; i < ships.length; i++) {
         current_ship = ships[i]
 
         // Check if ship is in transit
@@ -406,7 +406,7 @@ function draw() {
             current_ship.move(current_ship.data.journey[goal[1]].destination[0], current_ship.data.journey[goal[1]].destination[1], current_ship.data.journey[goal[1]].arrival);
         }
         // Draw ship
-        current_ship.display();
+        //current_ship.display();
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
