@@ -371,7 +371,7 @@ function setup() {
     }
     ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
 }
-        console.log(places[0]);
+        
     
 
     // Set values for data, and display the background image
@@ -410,7 +410,7 @@ function draw() {
     }
     // Check if time should move forward
     time = timeflow(time, speedoftime);
-        
+        console.log(places[0].color);
     
 }
 
