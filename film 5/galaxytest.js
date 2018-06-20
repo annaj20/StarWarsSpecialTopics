@@ -341,7 +341,7 @@ function setup() {
         } else if (i == 7){
             c = color(32, 139, 137)            
         }         
-        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*4, i*4))
+        ships.push(new Ship(current_ship.journey[0].start[0], current_ship.journey[0].start[1], c, current_ship, i*-4, i*4))
     }
 
     // Set values for data, and display the background image
