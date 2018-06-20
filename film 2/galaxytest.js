@@ -270,9 +270,6 @@ function colorLocations(time) {
     }
 }
             
-function colorNaboo () {
-    mentioned_locations[0].color = 255;
-}
 
 function flashLocation(place) {
     ellipse(place.coordinates[0], place.coordinates[1], place.radius, place.radius);
@@ -360,8 +357,7 @@ function setup() {
         
     }
     
-    // color Naboo
-    colorNaboo;
+    
 
     // Set values for data, and display the background image
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
@@ -379,6 +375,8 @@ function draw() {
     // Draw background
     imageMode(CORNER);
     image(stars, 0, 0, stars.width / 2, stars.height / 2);
+    // draw nodes
+    colorLocations(time);
 
     // Update each ship
     for (i = 0; i < ships.length; i++) {
@@ -397,8 +395,7 @@ function draw() {
     // Check if time should move forward
     time = timeflow(time, speedoftime);
     
-    // draw nodes
-    colorLocations(time);
+    
 }
 
 
